@@ -1,0 +1,92 @@
+{
+  "env": {
+    "jest": true,
+    "browser": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb/base",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:security/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier"
+  ],
+  "plugins": [
+    "security",
+    "prettier",
+    "@typescript-eslint"
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [
+        ".ts",
+        ".tsx"
+      ]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  },
+  "ignorePatterns": [
+    ".next",
+    "dist",
+    "node_modules",
+    "server/types/generated.ts",
+    "server/test/coverage",
+    "src/test/coverage"
+  ],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "groups": [
+          "builtin",
+          "external",
+          "index",
+          "internal",
+          "parent",
+          "sibling"
+        ]
+      }
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 1,
+    "@typescript-eslint/no-inferrable-types": [
+      1,
+      {
+        "ignoreParameters": true
+      }
+    ],
+    "react/prop-types": 0,
+    "arrow-parens": 0,
+    "consistent-return": 1,
+    "import/extensions": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/no-named-as-default": 0,
+    "import/prefer-default-export": 1,
+    "indent": [
+      2,
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "no-await-in-loop": 0,
+    "no-extra-semi": 0,
+    "no-underscore-dangle": 0,
+    "object-curly-newline": 0,
+    "strict": 0
+  }
+}

@@ -1,0 +1,6 @@
+.env
+.next
+dist
+node_modules
+server/test/coverage
+src/test/coverage
