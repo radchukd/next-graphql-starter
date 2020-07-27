@@ -55,6 +55,7 @@ nextServer.prepare().then(() => {
   server.get('*', (req: Request, res: Response) => handle(req, res));
 
   server.listen(PORT, async () => {
+    console.log(`Running on http://localhost:${PORT}`); // eslint-disable-line no-console
     await db.init();
   });
 });

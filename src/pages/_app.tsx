@@ -2,7 +2,7 @@ import React, { FC, Attributes } from 'react';
 import { ApolloProvider } from '@apollo/client';
 
 import { useApollo } from '../config';
-import './base.scss';
+import '../styles/index.scss';
 
 interface AppProps {
   initialState: Record<string, any>;

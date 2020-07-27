@@ -8,6 +8,7 @@
   "extends": [
     "airbnb/base",
     "eslint:recommended",
+    "plugin:react/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:security/recommended",
@@ -15,24 +16,15 @@
     "prettier/@typescript-eslint",
     "prettier"
   ],
-  "plugins": [
-    "security",
-    "prettier",
-    "@typescript-eslint"
-  ],
+  "plugins": ["security", "prettier", "@typescript-eslint"],
   "settings": {
+    "react": { "version": "16.13.1" },
     "import/parsers": {
-      "@typescript-eslint/parser": [
-        ".ts",
-        ".tsx"
-      ]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".ts", ".tsx"]
       }
     }
   },
